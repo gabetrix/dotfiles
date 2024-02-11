@@ -1,2 +1,2 @@
 # dotfiles
-Repository for my dotfiels
+Repository for my dotfiles
