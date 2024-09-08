@@ -21,6 +21,7 @@ alias ll='ls -l'
 alias k='kubectl'
 alias v='nvim'
 alias repos='cd $HOME/repos/'
+alias d="podman"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
