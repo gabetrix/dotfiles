@@ -10,6 +10,12 @@ export GITUSER="gabetrix"
 export DOTFILES="$REPOS/dotfiles"
 export SCRIPTS="$HOME/.scripts/"
 source ~/.git-prompt.sh
+export PY_BIN="$HOME/Library/Python/3.9/bin"
+export GO_BIN="/Users/gabriel/go/bin"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+# export JAVA_HOME="/opt/homebrew/Cellar/openjdk/23/libexec/openjdk.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/graalvm-jdk-23+37.1/Contents/Home/"
+export PATH=$PATH:$PY_BIN:$GO_BIN:$JAVA_HOME
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -21,8 +27,10 @@ alias ll='ls -l'
 alias k='kubectl'
 alias v='nvim'
 alias repos='cd $HOME/repos/'
-alias d="podman"
+alias d='podman'
+alias tf='tofu'
 
+export REGISTRY_AUTH_FILE="~/.config/podman/auth.json"
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -31,3 +39,6 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_DESCRIBE_STYLE="branch"
 # export GIT_PS1_SHOWUPSTREAM="auto git"
 PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\]:\[\e[35m\]\W\[\e[0m\]" " \n$ "'
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
