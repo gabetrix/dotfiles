@@ -16,6 +16,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # export JAVA_HOME="/opt/homebrew/Cellar/openjdk/23/libexec/openjdk.jdk/Contents/Home"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/graalvm-jdk-23+37.1/Contents/Home/"
 export PATH=$PATH:$PY_BIN:$GO_BIN:$JAVA_HOME
+export REGISTRY_AUTH_FILE="$HOME/.config/containers/auth.json"
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
