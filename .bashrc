@@ -31,15 +31,15 @@ alias repos='cd $HOME/repos/'
 alias d='podman'
 alias tf='tofu'
 
-export REGISTRY_AUTH_FILE="~/.config/podman/auth.json"
+#  export REGISTRY_AUTH_FILE="~/.config/podman/auth.json"
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 # Explicitly unset color (default anyhow). Use 1 to set it.
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_DESCRIBE_STYLE="branch"
-# export GIT_PS1_SHOWUPSTREAM="auto git"
-PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\]:\[\e[35m\]\W\[\e[0m\]" " \n$ "'
+# export GIT_PS1_SHOWUPSTREAM="autot"
+PROMPT_COMMAND='__git_ps1 "\[\e[33m\]\u\[\e[0m\]@\[\e[34m\]\$(scutil --get ComputerName 2>/dev/null)\[\e[0m\]:\[\e[35m\]\W\[\e[0m\]" " \n$ "'
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
