@@ -35,7 +35,6 @@ function! GitBranch() abort
 	let label = 'null'
 	if exists("b:gitbranch") && !empty(b:gitbranch)
 		let label = '  ' . b:gitbranch 
-	" elseif empty(b:gitbranch)
 	else
 		let label = ' ?.NO-REPO '
 	endif
@@ -136,10 +135,8 @@ nnoremap <silent> <leader>Q :call SmartCloseBuffer()<CR>
 " Toggle focus between NERDTree and last buffer
 function! ToggleNERDTreeFocus() abort
   if &filetype ==# 'nerdtree'
-    " If we are in NERDTree, go back to the previous window
     wincmd p
   else
-    " Try to find a nerdtree window and jump there
     for w in range(1, winnr('$'))
       if getbufvar(winbufnr(w), '&filetype') ==# 'nerdtree'
         execute w . 'wincmd w'
